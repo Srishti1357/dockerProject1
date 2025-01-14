@@ -25,7 +25,7 @@ phases:
       - | 
         echo '[
         {
-          "name": "newcontainer",
+          "name": "task_container",
           "imageUri": "545009868394.dkr.ecr.eu-north-1.amazonaws.com/dockerproject1:latest"
           }
         ]' >imagedefinitions.json
