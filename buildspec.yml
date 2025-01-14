@@ -13,14 +13,14 @@ phases:
       - apt-get install -y docker.io
 
       - echo "Logging in to Amazon ECR..."
-      - aws ecr get-login-password --region eu-north-1 | docker login --username AWS --password-stdin 337909784521.dkr.ecr.eu-north-1.amazonaws.com
+      - aws ecr get-login-password --region eu-north-1 | docker login --username AWS --password-stdin 545009868394.dkr.ecr.eu-north-1.amazonaws.com
       
       - echo "Building the Docker image..."
-      - docker build -t doc .
+      - docker build -t dockerproject1 .
       
       - docker tag dockerproject1:latest 545009868394.dkr.ecr.eu-north-1.amazonaws.com/dockerproject1:latest
       - echo "Pushing the Docker image to ECR..."
-      - docker push 337909784521.dkr.ecr.eu-north-1.amazonaws.com/doc:latest
+      - docker push 545009868394.dkr.ecr.eu-north-1.amazonaws.com/dockerproject1:latest
 
       - | 
         echo '[
